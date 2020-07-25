@@ -1,0 +1,6 @@
+{
+  "tailwindCSS.includeLanguages": {
+    "tailwindCSS.includeLanguages": ["html","css", "javascript"]
+  
+  }
+}
