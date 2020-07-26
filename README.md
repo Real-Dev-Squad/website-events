@@ -26,12 +26,13 @@ We use [Netlify](https://www.netlify.com) to deploy our site, because its awesom
 | Field Name | Field Type | Required | Description|
 | -----------|------------|----------|------------|
 | eventId | String | True | Unique event ID (auto generated)
-| Title | String| True | Event title |
+| status | Enum ['Previous', 'Upcoming'] | True | Event status
+| title | String| True | Event title |
 | startTime| Date/String(yet to finalize) | True | Event starting date and time
 | duration | Number(in seconds) | True | Event duration
 | description | String | False | Event desciption
-| Speakers | [Speaker] (array of speaker) | True | Speaker in Event (at least one speaker required for event)
-|Attendees | [Attendee] (array of attendee) | True| Attendees for event(default value is empty array)
+| speakers | [speakerId] (array of speaker) | True | Speaker in Event (at least one speaker required for event)
+|attendees | [Attendee] (array of attendee) | True| Attendees for event(default value is empty array)
 |joiningUrl| String(href link) | True | Link to attend event
 
 
@@ -42,7 +43,7 @@ We use [Netlify](https://www.netlify.com) to deploy our site, because its awesom
 | fullName | String | True | Speaker's full name
 | avatarUrl | String | True | Speaker's avatar URL(local or remote URL)
 | jobTitle | String | True | Speaker's job title
-| company | String | False | Work place name of speaker
+| companyUrl | String(href link) | False | Work place URL of speaker
 | githubUrl | String(href link) | False | Github URL
 | linkedinUrl | String(href link) | False | Linkedin URL
 | twitterUrl | String(href link) | False | Twitter URL
