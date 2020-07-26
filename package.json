@@ -2,7 +2,7 @@
   "name": "rds-events-website",
   "version": "0.1.0",
   "private": true,
-  "author": "Satyam Bansa",
+  "author": "Real dev squad community",
   "scripts": {
     "dev": "next -p 3010",
     "build": "next build",
