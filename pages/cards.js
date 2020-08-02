@@ -1,6 +1,6 @@
-import React from "react";
-import PropertyCard from "../components/PropertyCard";
-import properties from "./api/properties";
+import React from 'react';
+import PropertyCard from '../components/PropertyCard';
+import properties from './api/properties';
 
 export default function () {
   const cardsContent = properties.map((property) => (

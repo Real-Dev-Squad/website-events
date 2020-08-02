@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function ({
+export default function ImageCard({
   city,
   averagePrice,
   imageUrl,
@@ -16,7 +17,7 @@ export default function ({
           alt={imageAlt}
         />
         <div className="px-6 py-4">
-  <h3 className="text-lg font-semibold text-gray-800">{city}</h3>
+          <h3 className="text-lg font-semibold text-gray-800">{city}</h3>
           <p className="text-gray-600"> ${averagePrice} / night average</p>
           <div className="mt-4">
             <a
@@ -31,3 +32,11 @@ export default function ({
     </div>
   );
 }
+
+ImageCard.propTypes = {
+  city: PropTypes.string.isRequired,
+  averagePrice: PropTypes.number.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  imageAlt: PropTypes.string.isRequired,
+  propertyCount: PropTypes.number.isRequired,
+};

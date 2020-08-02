@@ -1,5 +1,5 @@
-import Head from "next/head";
-import DestinationList from '../components/DestinationsList'
+import Head from 'next/head';
+import DestinationList from '../components/DestinationsList';
 
 export default function Home() {
   return (

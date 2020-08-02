@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function ({
+export default function PropertyCard({
   imageUrl,
   imageAlt,
   beds,
   baths,
   title,
-  priceInCents,
   formattedPrice,
   reviewCount,
   rating,
@@ -15,7 +15,7 @@ export default function ({
     <svg
       key={i}
       className={`h-4 w-4 fill-current ${
-        i < rating ? "text-teal-500" : "text-gray-400"
+        i < rating ? 'text-teal-500' : 'text-gray-400'
       }`}
       viewBox="0 0 24 24"
     >
@@ -39,20 +39,23 @@ export default function ({
               New
             </span>
             <div className="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
-              {beds} beds &bull; {baths} baths
+              {beds} beds &bull;
+              {baths} baths
             </div>
           </div>
           <h4 className="mt-1 font-semibold text-lg leading-tight truncate">
             {title}
           </h4>
           <div className="mt-1">
-            {formattedPrice} <span className="text-gray-600 text-sm">/ wk</span>
+            {formattedPrice}
+            <span className="text-gray-600 text-sm">/ wk</span>
           </div>
           <div className="mt-2 flex items-center">
             {stars}
             <span className="text-teal-600 font-semibold">
-              {" "}
-              {rating}/5 stars{" "}
+              {' '}
+              {rating}
+              /5 stars{' '}
             </span>
             <span className="text-gray-600 text-sm ml-2">
               {reviewCount} reviews
@@ -63,3 +66,14 @@ export default function ({
     </div>
   );
 }
+
+PropertyCard.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  imageAlt: PropTypes.string.isRequired,
+  beds: PropTypes.number.isRequired,
+  baths: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  formattedPrice: PropTypes.string.isRequired,
+  reviewCount: PropTypes.number.isRequired,
+  rating: PropTypes.number.isRequired,
+};
