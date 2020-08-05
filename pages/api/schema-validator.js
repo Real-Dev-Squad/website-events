@@ -6,7 +6,7 @@ ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-06.json'));
 
 const eventData = {
   eventId: 'testevent',
-  status: 'previous',
+  status: 'previous12',
   title: 'Basics of react hooks',
 };
 

@@ -3,17 +3,17 @@ module.exports = {
   description: 'Real dev squad events',
   type: 'object',
   properties: {
-    eventId: {
+    id: {
       type: 'string',
       description: 'Unique event ID (auto generated)',
-    },
-    status: {
-      enum: ['previous', 'upcoming'],
-      description: 'event status',
     },
     title: {
       type: 'string',
       description: 'event title',
+    },
+    subTitle: {
+      type: 'string',
+      description: 'event subtitle',
     },
     startTime: {
       type: 'string',
@@ -31,6 +31,17 @@ module.exports = {
     joiningUrl: {
       type: 'string',
       description: 'link to attend event',
+    },
+    mastheadUrl: {
+      type: 'string',
+      description: 'Masthead image url',
+    },
+    tags: {
+      type: 'array',
+      items: {
+        type: 'string',
+        description: 'tag name',
+      },
     },
   },
 };
